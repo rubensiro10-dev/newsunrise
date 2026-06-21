@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <img src="images/logo.png" alt="Sunrise Restaurant Logo" id="logo">
+  <title>Sunrise Restaurant - Order</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" sizes="32x32" href="images/favicon.png">
+  <link rel="icon" sizes="16x16" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Navigation -->
+   <nav>
+    <a href="index.html">Home</a>
+    <a href="table.html">Menu</a>
+    <a href="Form.html">Order Online</a>
+    <a href="reserved.html">Estemeed Clients</a>
+    <a href="about.html">About Us</a>
+  </nav>
+
+
+
+  <!-- Order Form -->
+  <h1>Place Your Order Online</h1>
+  <p>Fill in the form below to enjoy our meals from the comfort of your home or office.</p>
+
+  <form name="orderForm" onsubmit="return validateForm()">
+  <input type="text" name="name" placeholder="Full Name">
+  <input type="text" name="phone" placeholder="Phone Number">
+  <input type="date" name="date">
+  <select name="dish">
+    <option value="">Select a dish</option>
+    <option value="Pizza">Pizza</option>
+    <option value="Burger">Burger</option>
+    <option value="Pasta">Pasta</option>
+  </select>
+  <input type="submit" value="Reserve Order">
+</form>
+
+<script src="script.js"></script>
+
+</body>
+</html>

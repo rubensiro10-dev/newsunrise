@@ -1,0 +1,115 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("image.webp"); /* make sure this file exists */
+  background-size: cover;
+  background-attachment: fixed;
+  color: white; /* default text color */
+}
+
+/* Navigation bar */
+nav {
+  background: #8B0000;
+  padding: 12px;
+  text-align: center;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  color: blue; /* headings are blue */
+}
+
+/* Table styling */
+table {
+  width: 70%;              /* smaller width */
+  margin: 20px auto;       /* center horizontally */
+  border-collapse: collapse;
+  background: skyblue;
+  color: white;            /* table text white */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+table, th, td {
+  border: 1px solid #ccc;
+}
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+th {
+  background: red;
+  color: white;            /* table header text white */
+}
+
+/* Form styling */
+form {
+  width: 50%;              /* smaller width */
+  margin: 30px auto;       /* center horizontally */
+  padding: 20px;
+  background: #552626;        /* white background */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  color: white;            /* readable text on white background */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type="submit"] {
+  background: green;       /* submit button green */
+  color: white;            /* button text white */
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  padding: 12px;
+}
+input[type="submit"]:hover {
+  background: darkgreen;   /* darker green on hover */
+  /* About Us section */
+/* About Us page */
+#about {
+  width: 70%;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#about h2 {
+  color: blue;
+  margin-bottom: 15px;
+}
+
+#about p {
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Copyright footer */
+#copyright {
+  text-align: center;
+  margin-top: 40px;
+  padding: 15px;
+  background: #222;
+  color: #ccc;
+  font-size: 14px;
+}
