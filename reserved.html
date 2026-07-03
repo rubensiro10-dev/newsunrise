@@ -13,7 +13,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="brand">
-        <img src="images/logo.png" alt="" class="brand-logo" onerror="this.style.display='none'">
+        <img src="images/logo.png" alt="" class="brand-logo">
         <div>
           <span class="brand-text">Sunrise Restaurant</span>
           <span class="brand-tagline">Est. Kiambu</span>
@@ -53,7 +53,7 @@
           </table>
         </div>
         <div class="actions-bar">
-          <button type="button" class="btn btn-danger" onclick="clearOrders()">Clear All Orders</button>
+          <button type="button" id="clearOrdersBtn" class="btn btn-danger">Clear All Orders</button>
         </div>
       </div>
     </section>
@@ -72,6 +72,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

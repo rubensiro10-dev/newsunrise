@@ -13,7 +13,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="brand">
-        <img src="images/logo.png" alt="" class="brand-logo" onerror="this.style.display='none'">
+        <img src="images/logo.png" alt="" class="brand-logo">
         <div>
           <span class="brand-text">Sunrise Restaurant</span>
           <span class="brand-tagline">Est. Kiambu</span>
@@ -39,7 +39,7 @@
     <section class="section">
       <div class="container form-section">
         <div id="formNotification" class="notification" role="alert"></div>
-        <form name="orderForm" class="order-form" onsubmit="return validateForm()" novalidate>
+        <form name="orderForm" class="order-form" novalidate>
           <div class="form-group">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" placeholder="John Doe" required>
@@ -82,6 +82,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
