@@ -2,61 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-    <img src="images/logo.png" alt="Sunrise Restaurant Logo" id="logo">
-  <title>Sunrise Restaurant - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sunrise Restaurant — fine dining in Kiambu Township. Authentic flavors, warm hospitality, and unforgettable experiences.">
+  <title>Sunrise Restaurant — Home</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" sizes="32x32" href="images/favicon.png">
-  <link rel="icon" sizes="16x16" href="images/favicon.png">
-
-
-
+  <link rel="icon" href="images/favicon.png">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="table.html">Menu</a>
-    <a href="Form.html">Order Online</a>
-    <a href="reserved.html">Estemeed Clients</a>
-    <a href="about.html">About Us</a>
-  </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="" class="brand-logo" onerror="this.style.display='none'">
+        <div>
+          <span class="brand-text">Sunrise Restaurant</span>
+          <span class="brand-tagline">Est. Kiambu</span>
+        </div>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="table.html">Menu</a>
+        <a href="Form.html">Order Online</a>
+        <a href="reserved.html">Reservations</a>
+        <a href="about.html">About Us</a>
+      </nav>
+    </div>
+  </header>
 
-<section id="about-image">
-  <h2>Our Restaurant</h2>
-  <img src="C:\Users\User\OneDrive\Desktop\restraunt\OIP.jpg" alt="Sunrise Restaurant Front View">
-  <img src="C:\Users\User\OneDrive\Desktop\restraunt\modern-japanese-restaurant-exterior-warm-lighting-showcasing-sleek-facade-large-window-welcoming-ambiance-322227856.webp" alt="Sunrise Restaurant Front View">
-  
-</section>
-<section id="video">
-  <h2>Watch Our Restaurant Video</h2>
-  <video width="600" controls poster="images/restaurant.webp">
-    <source src="C:\Users\User\OneDrive\Desktop\restraunt\WhatsApp Video 2026-06-13 at 19.42.18.mp4" type="video/mp4">
-    
-    Your browser does not support the video tag.
-  </video>
-</section>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-divider"></div>
+        <h1>Where Every Meal Becomes a Memory</h1>
+        <p class="lead">Serving authentic flavors with passion and care in the heart of Kiambu Township.</p>
+        <div class="hero-actions">
+          <a href="table.html" class="btn btn-primary">View Menu</a>
+          <a href="Form.html" class="btn btn-outline">Order Online</a>
+        </div>
+      </div>
+    </section>
 
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Visit Us</span>
+          <h2>Our Restaurant</h2>
+          <p class="lead text-center">A welcoming space crafted for memorable dining experiences.</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="OIP.jpg" alt="Sunrise Restaurant exterior">
+          </div>
+          <div class="gallery-item">
+            <img src="modern-japanese-restaurant-exterior-warm-lighting-showcasing-sleek-facade-large-window-welcoming-ambiance-322227856.webp" alt="Sunrise Restaurant ambiance">
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Home Content -->
-  <h1>🌅 Welcome to Sunrise Restaurant</h1>
-  <p>Serving authentic flavors with passion and care.</p>
-  <p><strong>Location:</strong> Kiambu Township</p>
-  <p><strong>Phone:</strong> 0712 345 678</p>
-  <p><strong>Email:</strong> info@sunrise.co.ke</p>
+    <section class="section" style="background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Experience</span>
+          <h2>Our Story in Motion</h2>
+        </div>
+        <div class="video-wrapper">
+          <video controls poster="images/restaurant.webp">
+            <source src="WhatsApp Video 2026-06-13 at 19.42.18.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
 
-  <p>We pride ourselves on offering delicious meals at affordable prices for our community. Explore our menu and place your order today!</p>
-<section id="about">
-  <h2>About Us</h2>
-  <p>
-    At Sunrise Restaurant, we believe dining is more than just food — it’s an experience.  
-    Our chefs prepare every meal with fresh, locally sourced ingredients, blending tradition with creativity.  
-    Whether you’re enjoying a family dinner, a casual lunch, or celebrating a special occasion,  
-    Sunrise Restaurant offers warm hospitality and unforgettable flavors.
-  </p>
-</section>
+    <section class="section">
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-card-icon">&#9679;</div>
+            <h3>Location</h3>
+            <p>Kiambu Township, Kenya</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">&#9679;</div>
+            <h3>Telephone</h3>
+            <p>0712 345 678</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">&#9679;</div>
+            <h3>Email</h3>
+            <p>info@sunrise.co.ke</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<script src="script.js"></script>
+    <section class="section section-sm">
+      <div class="container">
+        <div class="about-content">
+          <span class="section-label">About Us</span>
+          <h2>Crafted with Care, Served with Pride</h2>
+          <p>
+            At Sunrise Restaurant, we believe dining is more than just food — it is an experience.
+            Our chefs prepare every meal with fresh, locally sourced ingredients, blending tradition with creativity.
+            Whether you are enjoying a family dinner, a casual lunch, or celebrating a special occasion,
+            Sunrise Restaurant offers warm hospitality and unforgettable flavors.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">Sunrise Restaurant</div>
+      <p class="footer-tagline">Authentic flavors. Exceptional hospitality.</p>
+      <div class="footer-divider"></div>
+      <p class="footer-contact">
+        Kiambu Township &nbsp;·&nbsp; 0712 345 678 &nbsp;·&nbsp;
+        <a href="mailto:info@sunrise.co.ke">info@sunrise.co.ke</a>
+      </p>
+      <p class="footer-copy">&copy; 2026 Sunrise Restaurant. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -2,44 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-    <img src="images/logo.png" alt="Sunrise Restaurant Logo" id="logo">
-  <title>Sunrise Restaurant - Order</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Order online from Sunrise Restaurant — fast, convenient delivery and pickup in Kiambu.">
+  <title>Order Online — Sunrise Restaurant</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" sizes="32x32" href="images/favicon.png">
-  <link rel="icon" sizes="16x16" href="images/favicon.png">
-
+  <link rel="icon" href="images/favicon.png">
 </head>
 <body>
 
-  <!-- Navigation -->
-   <nav>
-    <a href="index.html">Home</a>
-    <a href="table.html">Menu</a>
-    <a href="Form.html">Order Online</a>
-    <a href="reserved.html">Estemeed Clients</a>
-    <a href="about.html">About Us</a>
-  </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="" class="brand-logo" onerror="this.style.display='none'">
+        <div>
+          <span class="brand-text">Sunrise Restaurant</span>
+          <span class="brand-tagline">Est. Kiambu</span>
+        </div>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="table.html">Menu</a>
+        <a href="Form.html" class="active">Order Online</a>
+        <a href="reserved.html">Reservations</a>
+        <a href="about.html">About Us</a>
+      </nav>
+    </div>
+  </header>
 
+  <main>
+    <div class="page-header">
+      <div class="hero-divider"></div>
+      <h1>Order Online</h1>
+      <p class="lead">Reserve your meal from the comfort of your home or office.</p>
+    </div>
 
+    <section class="section">
+      <div class="container form-section">
+        <div id="formNotification" class="notification" role="alert"></div>
+        <form name="orderForm" class="order-form" onsubmit="return validateForm()" novalidate>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="0712345678" required>
+          </div>
+          <div class="form-group">
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="form-group">
+            <label for="dish">Select a Dish</label>
+            <select id="dish" name="dish" required>
+              <option value="">Choose from our menu</option>
+              <option value="Grilled Chicken">Grilled Chicken — KSh 850</option>
+              <option value="Beef Burger">Beef Burger — KSh 700</option>
+              <option value="Vegetable Salad">Vegetable Salad — KSh 500</option>
+              <option value="Spaghetti Pasta">Spaghetti Pasta — KSh 650</option>
+              <option value="Fish and Chips">Fish and Chips — KSh 750</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Reserve Order</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
-  <!-- Order Form -->
-  <h1>Place Your Order Online</h1>
-  <p>Fill in the form below to enjoy our meals from the comfort of your home or office.</p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">Sunrise Restaurant</div>
+      <p class="footer-tagline">Authentic flavors. Exceptional hospitality.</p>
+      <div class="footer-divider"></div>
+      <p class="footer-contact">
+        Kiambu Township &nbsp;·&nbsp; 0712 345 678 &nbsp;·&nbsp;
+        <a href="mailto:info@sunrise.co.ke">info@sunrise.co.ke</a>
+      </p>
+      <p class="footer-copy">&copy; 2026 Sunrise Restaurant. All rights reserved.</p>
+    </div>
+  </footer>
 
-  <form name="orderForm" onsubmit="return validateForm()">
-  <input type="text" name="name" placeholder="Full Name">
-  <input type="text" name="phone" placeholder="Phone Number">
-  <input type="date" name="date">
-  <select name="dish">
-    <option value="">Select a dish</option>
-    <option value="Pizza">Pizza</option>
-    <option value="Burger">Burger</option>
-    <option value="Pasta">Pasta</option>
-  </select>
-  <input type="submit" value="Reserve Order">
-</form>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>

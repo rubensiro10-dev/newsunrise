@@ -2,67 +2,105 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-    <img src="images/logo.png" alt="Sunrise Restaurant Logo" id="logo">
-  <title>About Us - Sunrise Restaurant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Sunrise Restaurant — our story, values, and commitment to exceptional dining in Kiambu.">
+  <title>About Us — Sunrise Restaurant</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" sizes="32x32" href="images/favicon.png">
-  <link rel="icon" sizes="16x16" href="images/favicon.png">
-
+  <link rel="icon" href="images/favicon.png">
 </head>
 <body>
 
-  <!-- Navigation -->
-    <nav>
-    <a href="index.html">Home</a>
-    <a href="table.html">Menu</a>
-    <a href="Form.html">Order Online</a>
-    <a href="reserved.html">Estemeed Clients</a>
-    <a href="about.html">About Us</a>
-  </nav>
-  <!-- About Us Section -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      At Sunrise Restaurant, we believe dining is more than just food — it’s an experience.  
-      Our chefs prepare every meal with fresh, locally sourced ingredients, blending tradition with creativity.  
-      Whether you’re enjoying a family dinner, a casual lunch, or celebrating a special occasion,  
-      Sunrise Restaurant offers warm hospitality and unforgettable flavors.
-    </p>
-    <p>
-       Contact us: <a href="mailto:info@sunriserestaurant.com">info@sunriserestaurant.com</a>
-    </p>
-    <p>
-        <a href="https://www.kfc.ke/en/menu">sunrise hotel</a> and learn more about our hotel.
-    </p>   
-  </section>
-
-  <!-- Copyright Section -->
-  
-  <footer>
-  <h2>Customer Trust</h2>
-  <section id="testimonials">
-    <h3>What Our Customers Say</h3>
-    <div class="testimonial">
-      <p>"The food was absolutely delicious and the service was excellent!"</p>
-      <span>- Mary W.</span>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="" class="brand-logo" onerror="this.style.display='none'">
+        <div>
+          <span class="brand-text">Sunrise Restaurant</span>
+          <span class="brand-tagline">Est. Kiambu</span>
+        </div>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="table.html">Menu</a>
+        <a href="Form.html">Order Online</a>
+        <a href="reserved.html">Reservations</a>
+        <a href="about.html" class="active">About Us</a>
+      </nav>
     </div>
-    <div class="testimonial">
-      <p>"Best dining experience in town. Affordable and tasty meals."</p>
-      <span>- James K.</span>
-    </div>
-    <div class="testimonial">
-      <p>"I love the cozy atmosphere. Sunrise Restaurant is my go-to spot."</p>
-      <span>- Anita M.</span>
-    </div>
-  </section>
+  </header>
 
-  <p>Follow us on:</p>
-  <a href="https://www.instagram.com/am_azesiro/" target="_blank">Instagram</a> |
-  <a href="https://www.facebook.com/profile.php?id=61569842661706&sk=friends_all" target="_blank">Facebook</a> |
-  <a href="https://www.tiktok.com/@amaze575" target="_blank">TikTok</a>
+  <main>
+    <div class="page-header">
+      <div class="hero-divider"></div>
+      <h1>About Us</h1>
+      <p class="lead">Passion for food. Commitment to community. A dedication to excellence.</p>
+    </div>
 
-    <footer id="copyright"></footer>
-    <p>&copy; 2026 Sunrise Restaurant. All rights reserved.</p>
+    <section class="section">
+      <div class="container">
+        <div class="about-content">
+          <p>
+            At Sunrise Restaurant, we believe dining is more than just food — it is an experience.
+            Our chefs prepare every meal with fresh, locally sourced ingredients, blending tradition with creativity.
+            Whether you are enjoying a family dinner, a casual lunch, or celebrating a special occasion,
+            Sunrise Restaurant offers warm hospitality and unforgettable flavors.
+          </p>
+          <p>
+            Contact us at
+            <a href="mailto:info@sunrise.co.ke">info@sunrise.co.ke</a>
+            or call 0712 345 678 to learn more about private events and catering.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--color-surface); border-top: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Testimonials</span>
+          <h2>What Our Guests Say</h2>
+        </div>
+        <div class="testimonials-grid">
+          <blockquote class="testimonial">
+            <p>"The food was absolutely delicious and the service was excellent."</p>
+            <cite>— Mary W.</cite>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p>"Best dining experience in town. Refined yet approachable."</p>
+            <cite>— James K.</cite>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p>"An elegant atmosphere with flavors that keep us coming back."</p>
+            <cite>— Anita M.</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sm">
+      <div class="container text-center">
+        <span class="section-label">Connect</span>
+        <h2>Follow Our Journey</h2>
+        <div class="social-links" style="margin-top: 24px;">
+          <a href="https://www.instagram.com/am_azesiro/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=61569842661706" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.tiktok.com/@amaze575" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">Sunrise Restaurant</div>
+      <p class="footer-tagline">Authentic flavors. Exceptional hospitality.</p>
+      <div class="footer-divider"></div>
+      <p class="footer-contact">
+        Kiambu Township &nbsp;·&nbsp; 0712 345 678 &nbsp;·&nbsp;
+        <a href="mailto:info@sunrise.co.ke">info@sunrise.co.ke</a>
+      </p>
+      <p class="footer-copy">&copy; 2026 Sunrise Restaurant. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>

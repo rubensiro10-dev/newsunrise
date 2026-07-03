@@ -1,79 +1,73 @@
-// Show welcome alert when homepage loads
-window.onload = function() {
-  // If we are on reserved.html, load orders instead of showing alert
-  if (document.getElementById("reservedTable")) {
-    let orders = JSON.parse(localStorage.getItem("orders")) || [];
-    let table = document.getElementById("reservedTable");
+function showNotification(elementId, message, type) {
+  var el = document.getElementById(elementId);
+  if (!el) return;
+  el.textContent = message;
+  el.className = 'notification show notification-' + type;
+}
 
-    orders.forEach(order => {
-      let newRow = table.insertRow();
-      newRow.insertCell(0).innerText = order.name;
-      newRow.insertCell(1).innerText = order.phone;
-      newRow.insertCell(2).innerText = order.date;
-      newRow.insertCell(3).innerText = order.dish;
+window.onload = function () {
+  if (document.getElementById('reservedTable')) {
+    var orders = JSON.parse(localStorage.getItem('orders')) || [];
+    var table = document.getElementById('reservedTable');
+    var tbody = table.querySelector('tbody') || table;
+
+    orders.forEach(function (order) {
+      var row = tbody.insertRow();
+      row.insertCell(0).textContent = order.name;
+      row.insertCell(1).textContent = order.phone;
+      row.insertCell(2).textContent = order.date;
+      row.insertCell(3).textContent = order.dish;
     });
-  } else {
-    // Default homepage alert
-    alert("Welcome to Sunrise Restaurant!");
   }
 };
 
-// Validate order form before submission
 function validateForm() {
-  let form = document.forms["orderForm"];
-  let name = form["name"].value.trim();
-  let phone = form["phone"].value.trim();
-  let date = form["date"].value;
-  let dish = form["dish"].value;
+  var form = document.forms['orderForm'];
+  var name = form['name'].value.trim();
+  var phone = form['phone'].value.trim();
+  var date = form['date'].value;
+  var dish = form['dish'].value;
 
-  // Full name must be at least two words
-  if (name.split(" ").length < 2) {
-    alert("Full name must contain at least two words.");
+  if (name.split(' ').filter(Boolean).length < 2) {
+    showNotification('formNotification', 'Please enter your full name (first and last).', 'error');
     return false;
   }
 
-  // Phone number must be exactly 10 digits
   if (!/^\d{10}$/.test(phone)) {
-    alert("Phone number must be exactly 10 digits.");
+    showNotification('formNotification', 'Phone number must be exactly 10 digits.', 'error');
     return false;
   }
 
-  // Date must be today or in the future
-  let today = new Date();
-  today.setHours(0,0,0,0);
-  let orderDate = new Date(date);
+  var today = new Date();
+  today.setHours(0, 0, 0, 0);
+  var orderDate = new Date(date);
   if (orderDate < today) {
-    alert("Date of ordering must be today or in the future.");
+    showNotification('formNotification', 'Please select today\'s date or a future date.', 'error');
     return false;
   }
 
-  // Dish must not be empty
-  if (dish === "") {
-    alert("Please select a dish.");
+  if (dish === '') {
+    showNotification('formNotification', 'Please select a dish from the menu.', 'error');
     return false;
   }
 
-  // Save order in localStorage
-  let orders = JSON.parse(localStorage.getItem("orders")) || [];
-  orders.push({ name, phone, date, dish });
-  localStorage.setItem("orders", JSON.stringify(orders));
+  var orders = JSON.parse(localStorage.getItem('orders')) || [];
+  orders.push({ name: name, phone: phone, date: date, dish: dish });
+  localStorage.setItem('orders', JSON.stringify(orders));
 
-  alert("Order reserved successfully!");
-  return false; // prevent actual form submission
+  showNotification('formNotification', 'Your order has been reserved successfully. We look forward to serving you.', 'success');
+  form.reset();
+  return false;
 }
 
-// Clear all orders (for reserved.html)
 function clearOrders() {
-  localStorage.removeItem("orders");
-  let table = document.getElementById("reservedTable");
-  // remove all rows except header
-  while (table.rows.length > 1) {
-    table.deleteRow(1);
-  }
-  alert("All orders cleared!");
-}
+  if (!confirm('Are you sure you want to clear all reserved orders?')) return;
 
-// Highlight menu item when clicked (menu.html)
-function highlightItem(itemId) {
-  document.getElementById(itemId).style.backgroundColor = "yellow";
+  localStorage.removeItem('orders');
+  var table = document.getElementById('reservedTable');
+  var tbody = table.querySelector('tbody') || table;
+  while (tbody.rows.length > 0) {
+    tbody.deleteRow(0);
+  }
+  showNotification('reservationNotification', 'All orders have been cleared.', 'success');
 }

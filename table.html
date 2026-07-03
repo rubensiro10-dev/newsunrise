@@ -2,63 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sunrise Restaurant - Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the Sunrise Restaurant menu — signature dishes crafted with fresh, locally sourced ingredients.">
+  <title>Menu — Sunrise Restaurant</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" sizes="32x32" href="images/favicon.png">
-  <link rel="icon" sizes="16x16" href="images/favicon.png">
-
-
-
+  <link rel="icon" href="images/favicon.png">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="menu.html">Menu</a>
-    <a href="order.html">Order Online</a>
-    <a href="reserved.html">Estemeed Clients</a>
-    <a href="about.html">About Us</a>
-  </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="" class="brand-logo" onerror="this.style.display='none'">
+        <div>
+          <span class="brand-text">Sunrise Restaurant</span>
+          <span class="brand-tagline">Est. Kiambu</span>
+        </div>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="table.html" class="active">Menu</a>
+        <a href="Form.html">Order Online</a>
+        <a href="reserved.html">Reservations</a>
+        <a href="about.html">About Us</a>
+      </nav>
+    </div>
+  </header>
 
+  <main>
+    <div class="page-header">
+      <div class="hero-divider"></div>
+      <h1>Our Signature Menu</h1>
+      <p class="lead">Carefully crafted meals prepared with fresh ingredients and culinary precision.</p>
+    </div>
 
-  <!-- Menu Content -->
-  <h1>Our Signature Menu</h1>
-  <p>Explore our carefully crafted meals, each prepared with fresh ingredients and a touch of love.</p>
+    <section class="section">
+      <div class="container">
+        <div class="menu-table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Dish</th>
+                <th>Price</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="menu-name">Grilled Chicken</td>
+                <td class="menu-price">KSh 850</td>
+                <td>Juicy chicken marinated with herbs and grilled to perfection.</td>
+              </tr>
+              <tr>
+                <td class="menu-name">Beef Burger</td>
+                <td class="menu-price">KSh 700</td>
+                <td>Succulent beef patty with cheese, lettuce, and house-made sauce.</td>
+              </tr>
+              <tr>
+                <td class="menu-name">Vegetable Salad</td>
+                <td class="menu-price">KSh 500</td>
+                <td>Fresh garden vegetables with olive oil and lemon dressing.</td>
+              </tr>
+              <tr>
+                <td class="menu-name">Spaghetti Pasta</td>
+                <td class="menu-price">KSh 650</td>
+                <td>Classic Italian pasta served with rich tomato sauce.</td>
+              </tr>
+              <tr>
+                <td class="menu-name">Fish and Chips</td>
+                <td class="menu-price">KSh 750</td>
+                <td>Crispy fried fish fillet with golden fries and tartar sauce.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="actions-bar">
+          <a href="Form.html" class="btn btn-primary">Place an Order</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <table border="1" width="100%">
-    <tr>
-      <th>Meal</th>
-      <th>Price (KSh)</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>Grilled Chicken</td>
-      <td>850</td>
-      <td>Juicy chicken marinated with herbs and grilled to perfection.</td>
-    </tr>
-    <tr>
-      <td>Beef Burger</td>
-      <td>700</td>
-      <td>Succulent beef patty with cheese, lettuce, and homemade sauce.</td>
-    </tr>
-    <tr>
-      <td>Vegetable Salad</td>
-      <td>500</td>
-      <td>Fresh garden vegetables tossed with olive oil and lemon dressing.</td>
-    </tr>
-    <tr>
-      <td>Spaghetti Pasta</td>
-      <td>650</td>
-      <td>Classic Italian pasta served with rich tomato sauce.</td>
-    </tr>
-    <tr>
-      <td>Fish and Chips</td>
-      <td>750</td>
-      <td>Crispy fried fish fillet with golden fries and tartar sauce.</td>
-    </tr>
-  </table>
-<script src="script.js"></script>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">Sunrise Restaurant</div>
+      <p class="footer-tagline">Authentic flavors. Exceptional hospitality.</p>
+      <div class="footer-divider"></div>
+      <p class="footer-contact">
+        Kiambu Township &nbsp;·&nbsp; 0712 345 678 &nbsp;·&nbsp;
+        <a href="mailto:info@sunrise.co.ke">info@sunrise.co.ke</a>
+      </p>
+      <p class="footer-copy">&copy; 2026 Sunrise Restaurant. All rights reserved.</p>
+    </div>
+  </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>

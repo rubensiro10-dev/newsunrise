@@ -2,77 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-    <img src="images/logo.png" alt="Sunrise Restaurant Logo" id="logo">
-  <title>Reserved Orders - Sunrise Restaurant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View reserved orders at Sunrise Restaurant.">
+  <title>Reservations — Sunrise Restaurant</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" sizes="32x32" href="images/favicon.png">
-  <link rel="icon" sizes="16x16" href="images/favicon.png">
-
+  <link rel="icon" href="images/favicon.png">
 </head>
 <body>
 
-  <!-- Navigation -->
- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>About Us - Sunrise Restaurant</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="" class="brand-logo" onerror="this.style.display='none'">
+        <div>
+          <span class="brand-text">Sunrise Restaurant</span>
+          <span class="brand-tagline">Est. Kiambu</span>
+        </div>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="table.html">Menu</a>
+        <a href="Form.html">Order Online</a>
+        <a href="reserved.html" class="active">Reservations</a>
+        <a href="about.html">About Us</a>
+      </nav>
+    </div>
+  </header>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="table.html">Menu</a>
-    <a href="Form.html">Order Online</a>
-    <a href="reserved.html">Estemeed Clients</a>
-    <a href="about.html">About Us</a>
-  </nav>
+  <main>
+    <div class="page-header">
+      <div class="hero-divider"></div>
+      <h1>Reserved Orders</h1>
+      <p class="lead">A record of all confirmed online reservations.</p>
+    </div>
 
+    <section class="section">
+      <div class="container">
+        <div id="reservationNotification" class="notification" role="alert"></div>
+        <div class="menu-table-wrapper">
+          <table id="reservedTable">
+            <thead>
+              <tr>
+                <th>Guest Name</th>
+                <th>Phone</th>
+                <th>Date</th>
+                <th>Dish</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="actions-bar">
+          <button type="button" class="btn btn-danger" onclick="clearOrders()">Clear All Orders</button>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <!-- About Us Section -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      At Sunrise Restaurant, we believe dining is more than just food — it’s an experience.  
-      Our chefs prepare every meal with fresh, locally sourced ingredients, blending tradition with creativity.  
-      Whether you’re enjoying a family dinner, a casual lunch, or celebrating a special occasion,  
-      Sunrise Restaurant offers warm hospitality and unforgettable flavors.
-    </p>
-    <p>
-      📧 Contact us: <a href="mailto:info@sunriserestaurant.com">info@sunriserestaurant.com</a>
-    </p>
-    <p>
-      🍗 Visit our partner: <a href="https://www.kfc.co.ke" target="_blank">KFC Kenya</a>
-    </p>
-  </section>
-
-  <!-- Copyright Section -->
-  <footer id="copyright">
-    <p>&copy; 2026 Sunrise Restaurant. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">Sunrise Restaurant</div>
+      <p class="footer-tagline">Authentic flavors. Exceptional hospitality.</p>
+      <div class="footer-divider"></div>
+      <p class="footer-contact">
+        Kiambu Township &nbsp;·&nbsp; 0712 345 678 &nbsp;·&nbsp;
+        <a href="mailto:info@sunrise.co.ke">info@sunrise.co.ke</a>
+      </p>
+      <p class="footer-copy">&copy; 2026 Sunrise Restaurant. All rights reserved.</p>
+    </div>
   </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
-
-
-  <!-- Reserved Orders Table -->
-  <h2>Reserved Orders</h2>
-  <table id="reservedTable">
-    <tr>
-      <th>Full Name</th>
-      <th>Phone</th>
-      <th>Date</th>
-      <th>Dish</th>
-    </tr>
-  </table>
-
-  <!-- Clear Orders Button -->
-  <div style="text-align:center; margin-top:20px;">
-    <button onclick="clearOrders()">Clear All Orders</button>
-  </div>
 
   <script src="script.js"></script>
 </body>
