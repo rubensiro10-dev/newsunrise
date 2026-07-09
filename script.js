@@ -13,6 +13,13 @@ const SunriseApp = (function () {
     { value: 'Vegetable Salad', label: 'Vegetable Salad — KSh 500' },
     { value: 'Spaghetti Pasta', label: 'Spaghetti Pasta — KSh 650' },
     { value: 'Fish and Chips', label: 'Fish and Chips — KSh 750' },
+    { value: 'Chapati', label: 'Chapati — KSh 80' },
+    { value: 'Smokies', label: 'Smokies — KSh 120' },
+    { value: 'Ugali with Sukuma Wiki', label: 'Ugali with Sukuma Wiki — KSh 400' },
+    { value: 'Rice and Beans', label: 'Rice and Beans — KSh 350' },
+    { value: 'Fish', label: 'Fish — KSh 750' },
+    { value: 'Beef Stew', label: 'Beef Stew — KSh 450' },
+    { value: 'Chicken Stew', label: 'Chicken Stew — KSh 500' },
   ];
 
   /* ── Utilities ── */
@@ -219,7 +226,7 @@ const SunriseApp = (function () {
   /* ── Scroll animations ── */
 
   function initScrollAnimations() {
-    const targets = $$('.section, .info-card, .testimonial, .gallery-item, .page-header');
+    const targets = $$('.section, .info-card, .testimonial, .gallery-item, .meal-card, .page-header');
     if (!targets.length || !('IntersectionObserver' in window)) return;
 
     targets.forEach((el) => el.classList.add('reveal'));
@@ -246,9 +253,10 @@ const SunriseApp = (function () {
       img.addEventListener('error', () => { img.style.display = 'none'; });
     });
 
-    $$('.gallery-item img').forEach((img) => {
+    $$('.gallery-item img, .meal-card-image img').forEach((img) => {
       img.addEventListener('error', function () {
-        this.closest('.gallery-item').classList.add('gallery-item--fallback');
+        const galleryItem = this.closest('.gallery-item');
+        if (galleryItem) galleryItem.classList.add('gallery-item--fallback');
       });
     });
   }
