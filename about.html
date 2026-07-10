@@ -104,6 +104,43 @@
   </footer>
 
   <script src="script.js" defer>
+<script type="module">
+  // Import Firebase SDKs
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-analytics.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
+
+  // Your Firebase project config (actual snippet you got)
+  const firebaseConfig = {
+    apiKey: "AIzaSyA3jKEM4DkTv0offUil1xQklrwaDuyEeIY",
+    authDomain: "newsunrise-d13b8.firebaseapp.com",
+    projectId: "newsunrise-d13b8",
+    storageBucket: "newsunrise-d13b8.appspot.com",
+    messagingSenderId: "721459790206",
+    appId: "1:721459790206:web:0ef3f07c788dee71b6f32f",
+    measurementId: "G-PP838E9STR"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const db = getFirestore(app);
+
+  // Handle form submission
+  document.getElementById("orderForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const meal = document.getElementById("meal").value;
+
+    await addDoc(collection(db, "orders"), {
+      name: name,
+      meal: meal,
+      timestamp: new Date()
+    });
+
+    alert("Order submitted!");
+  });
+</script>
 
 </script>
 </body>
