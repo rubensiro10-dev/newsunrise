@@ -104,5 +104,35 @@
   </footer>
 
   <script src="script.js" defer></script>
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "sunrise-restaurant.firebaseapp.com",
+    projectId: "sunrise-restaurant",
+    storageBucket: "sunrise-restaurant.appspot.com",
+    messagingSenderId: "123456789",
+    appId: "1:123456789:web:abcdef123456"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  document.getElementById("orderForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const meal = document.getElementById("meal").value;
+
+    await addDoc(collection(db, "orders"), {
+      name: name,
+      meal: meal,
+      timestamp: new Date()
+    });
+
+    alert("Order submitted!");
+  });
+</script>
 </body>
 </html>
