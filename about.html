@@ -103,16 +103,11 @@
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
-  <script type="module">
-  // Import the functions you need from the SDKs you need
+  <script src="script.js" defer>
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyBsUS3M8q2tVris0QVyKOCeQVPy7i9c-pw",
   authDomain: "sunrise-restaurant.firebaseapp.com",
@@ -122,6 +117,7 @@ const firebaseConfig = {
   appId: "1:787437345263:web:7e5e59f504f4080d9fbe1a",
   measurementId: "G-X5LSE9QHB5"
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
