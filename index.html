@@ -286,7 +286,7 @@
       <p class="footer-tagline">Authentic flavors. Exceptional hospitality.</p>
       <div class="footer-divider"></div>
       <p class="footer-contact">
-        Kiambu Township &nbsp;·&nbsp; 0712 345 678 &nbsp;·&nbsp;
+        Kiambu Township &nbsp;·&nbsp; 0798 392 403 &nbsp;·&nbsp;
         <a href="mailto:info@sunrise.co.ke">info@sunrise.co.ke</a>
       </p>
       <p class="footer-copy">&copy; 2026 Sunrise Restaurant. All rights reserved.</p>
@@ -294,45 +294,7 @@
   </footer>
 
   <script src="script.js" defer></script>
-  <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
-  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyA3jKEM4DkTv0offUil1xQklrwaDuyEeIY",
-    authDomain: "newsunrise-d13b8.firebaseapp.com",
-    projectId: "newsunrise-d13b8",
-    storageBucket: "newsunrise-d13b8.appspot.com",
-    messagingSenderId: "721459790206",
-    appId: "1:721459790206:web:0ef3f07c788dee71b6f32f",
-    measurementId: "G-PP838E9STR"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-  document.getElementById("orderForm").addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const date = document.getElementById("date").value;
-    const dish = document.getElementById("dish").value;
-
-    try {
-      await addDoc(collection(db, "orders"), {
-        name: name,
-        phone: phone,
-        date: date,
-        dish: dish,
-        timestamp: new Date()
-      });
-      alert("Order submitted!");
-    } catch (error) {
-      console.error("Error adding document: ", error);
-      alert("Failed to submit order. Check console for details.");
-    }
-  });
+  
 </script>
 
 </body>
