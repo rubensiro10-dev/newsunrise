@@ -114,20 +114,24 @@
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
 
-  document.getElementById("orderForm").addEventListener("submit", async (e) => {
+  // Attach listener to your form by name (no change to form markup)
+  document.querySelector("form[name='orderForm']").addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    // Grab values by ID
     const name = document.getElementById("name").value.trim();
     const phone = document.getElementById("phone").value.trim();
     const date = document.getElementById("date").value;
     const dish = document.getElementById("dish").value;
 
+    console.log("Captured values:", { name, phone, date, dish }); // Debug log
+
     try {
       await addDoc(collection(db, "orders"), {
-        name: name,
-        phone: phone,
-        date: date,
-        dish: dish,
+        name,
+        phone,
+        date,
+        dish,
         timestamp: new Date()
       });
       alert("Order submitted!");
@@ -136,6 +140,8 @@
       alert("Failed to submit order. Check console for details.");
     }
   });
+</script>
+
 </script>
 
 </body>
