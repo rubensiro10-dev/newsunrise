@@ -97,7 +97,7 @@
   </footer>
 
   <!-- Firestore script goes here -->
-  <script type="module">
+ <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
   import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
 
@@ -114,7 +114,7 @@
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
 
-  // Attach listener to your form by name (no change to form markup)
+  // Attach listener to your form by NAME
   document.querySelector("form[name='orderForm']").addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -141,6 +141,7 @@
     }
   });
 </script>
+
 
 </script>
 
